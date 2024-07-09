@@ -5,6 +5,11 @@ vim.keymap.set('i', 'jk', '<ESC>')
 vim.keymap.set('v', 'jk', '<ESC>')
 vim.keymap.set('t', 'jk', [[<C-\><C-n>]])
 
+-- Buffer nav
+vim.keymap.set('n', '<S-h>', '<cmd>bprev<CR>', opts)
+vim.keymap.set('n', '<S-l>', '<cmd>bnext<CR>', opts)
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>', opts)
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
